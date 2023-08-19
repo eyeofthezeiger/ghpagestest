@@ -1,21 +1,39 @@
 import React, { useEffect, useRef, useState } from 'react';
-import Home from './Home';
-import About from './About';
-import Experience from './Experience';
-import Portfolio from './Portfolio';
-// import './Snake.module.css';
-import AppleLogo from '../assets/applePixels.png';
-import useInterval from '../hooks/useInterval'; // Custom hook for interval handling
+import Home from '../Home';
+import About from '../Content/About';
+import Experience from '../Content/Experience';
+import Portfolio from '../Content/Portfolio';
+import './Snake.css';
+import AppleLogo from '../../assets/applePixels.png';
+import useInterval from '../../hooks/useInterval'; // Custom hook for interval handling
+import Box from '@mui/joy/Box';
+import Card from '@mui/joy/Card';
+import CardCover from '@mui/joy/CardCover';
+import CardContent from '@mui/joy/CardContent';
+import Typography from '@mui/joy/Typography';
+import Grid from '@mui/joy/Grid';
+import Sheet from '@mui/joy/Sheet';
+import FormControl from '@mui/joy/FormControl';
+import FormLabel from '@mui/joy/FormLabel';
+import RadioGroup from '@mui/joy/RadioGroup';
+import Radio from '@mui/joy/Radio';
+// import Grid from '@mui/joy/Grid';
+// import Card from '@mui/joy/Card';
+// import CardOverflow from '@mui/joy/CardOverflow';
+// import AspectRatio from '@mui/joy/AspectRatio';
+// import CardContent from '@mui/joy/CardContent';
+// import Typography from '@mui/joy/Typography';
+// import Divider from '@mui/joy/Divider';
 
 // Constants for canvas dimensions and game parameters
-const canvasX = 750;
-const canvasY = 750;
+const canvasX = 1;
+const canvasY = 1000;
 const initialSnake = [
   [4, 10],
   [4, 10],
 ];
 const initialApple = [14, 10];
-const scale = 50;
+const scale = 100;
 const timeDelay = 200;
 
 const Snake = () => {
@@ -167,28 +185,86 @@ const Snake = () => {
   
 
   return (
-    <div onKeyDown={e => changeDirection(e)}>
-      <img id="fruit" src={AppleLogo} alt="fruit" width="30" />
-      <canvas
-        className="playArea"
-        ref={canvasRef}
-        width={`${canvasX}px`}
-        height={`${canvasY}px`}
-      />
-      <button onClick={play} className="playButton" style={{ position: 'absolute', top: '58%', left: '85%' }}>
-        {isPlaying ? 'Restart' : 'Play'}
-      </button>
-      <button onClick={setPause} className="playButton" style={{ position: 'absolute', top: '58%', left: '93%' }}>
-        {isPaused ? "Resume" : "Pause"}
-      </button>
-        <div style={{ marginTop: '500px', color: 'black' }}>
-          {activeSection}
-        </div>
-      {/* <div className="scoreBox">
-        <h2>Score: {score}</h2>
-        <h2>High Score: {localStorage.getItem('snakeScore')}</h2>
-      </div> */}
+
+    <div className="section-container">
+    <div className="text-container">
+      <h2>Welcome!</h2>
+      <p>
+        Thank you for checking out my portfolio. My name is Matt and I'm a Software Engineer looking to break into the video game industry.
+      </p>
+      <p>
+        Before you get to the juicy part of my portfolio, feel free to play one of my favorite games as a kid, Snake. Just try to beat my high score — I bet you can't.
+      </p>
+      <p>
+        You can also navigate to certain sections of my portfolio by running the snake into the left, right, and bottom of the play area.
+        </p>
     </div>
+    <div className="rectangle"></div>
+  </div>
+
+  //   <Box
+  //   component="ul"
+  //   sx={{
+  //     display: 'flex',
+  //     justifyContent: 'center', // Center horizontally
+  //     alignItems: 'center', // Center vertically
+  //     minHeight: '100vh', // Set minimum height to cover the screen
+  //     p: 0,
+  //     m: 0,
+  //     // backgroundColor: '#f0f0f0', // Optional background color
+  //   }}
+  // >
+  //   <div>
+  //   <Card component="li" sx={{ minWidth: 300, flexGrow: 1 }}>
+  //     <CardCover>
+  //       <img
+  //         src="https://images.unsplash.com/photo-1502657877623-f66bf489d236?auto=format&fit=crop&w=800"
+  //         srcSet="https://images.unsplash.com/photo-1502657877623-f66bf489d236?auto=format&fit=crop&w=800&dpr=2 2x"
+  //         loading="lazy"
+  //         alt=""
+  //       />
+  //     </CardCover>
+  //     <CardContent>
+  //       <Typography
+  //         level="body-lg"
+  //         fontWeight="lg"
+  //         textColor="#fff"
+  //         mt={{ xs: 12, sm: 18 }}
+  //       >
+  //         Image
+  //       </Typography>
+  //     </CardContent>
+  //   </Card>
+  //   </div>
+  //   <div>
+  //   <Card component="li" sx={{ minWidth: 300, flexGrow: 1 }}>
+  //     <CardCover>
+  //       <video
+  //         autoPlay
+  //         loop
+  //         muted
+  //         poster="https://assets.codepen.io/6093409/river.jpg"
+  //       >
+  //         <source
+  //           src="https://assets.codepen.io/6093409/river.mp4"
+  //           type="video/mp4"
+  //         />
+  //       </video>
+  //     </CardCover>
+  //     <CardContent>
+  //       <Typography
+  //         level="body-lg"
+  //         fontWeight="lg"
+  //         textColor="#fff"
+  //         mt={{ xs: 12, sm: 18 }}
+  //       >
+  //         Video
+  //       </Typography>
+  //     </CardContent>
+  //   </Card>
+  //   </div>
+    
+  // </Box>
   );
 };
 

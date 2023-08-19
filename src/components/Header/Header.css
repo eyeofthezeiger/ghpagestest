@@ -12,13 +12,12 @@
     left: 0; /* Add this line to align to the left edge */
     width: 100vw; /* Use viewport width to span full width */
     z-index: 1000;
-    padding-left: 200px;
-    padding-top: 100px;
+    height: 63px;
   }
   
   .header-content {
     font-family: 'Anton', sans-serif;
-    font-size: 200px;
+    font-size: 78px;
     text-shadow: -2px -2px 15px #737882;
     font-weight: bold;
     text-transform: uppercase;

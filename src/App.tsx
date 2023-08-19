@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import SnakeGame from './components/Snake'; // Adjust the path accordingly
-import Portfolio from './components/Portfolio'; // Adjust the path accordingly
-import Experience from './components/Experience'; // Adjust the path accordingly
-import About from './components/About'; // Adjust the path accordingly
+import SnakeGame from './components/Snake/Snake'; // Adjust the path accordingly
+import Portfolio from './components/Content/Portfolio'; // Adjust the path accordingly
+import Experience from './components/Content/Experience'; // Adjust the path accordingly
+import About from './components/Content/About'; // Adjust the path accordingly
 import './App.css';
-import Header from './components/Header';
+import Header from './components/Header/Header';
 
 const App: React.FC = () => {
   const [activeSection, setActiveSection] = useState('portfolio');
@@ -30,12 +30,12 @@ const App: React.FC = () => {
       {/* Header */}
         <Header />
 
-      {/* Snake Game */}
+
       <section className="snake-game">
         <SnakeGame />
       </section>
 
-      {/* Navbar */}
+
       <nav className="navbar">
         <button onClick={() => handleSectionChange('experience')}>
           Experience
@@ -46,7 +46,7 @@ const App: React.FC = () => {
         <button onClick={() => handleSectionChange('about')}>About Me</button>
       </nav>
 
-      {/* Selected Section */}
+
       <section className="selected-section">{sectionToRender}</section>
     </div>
   );
