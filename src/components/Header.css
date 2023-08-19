@@ -1,0 +1,27 @@
+/* Header.css */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e1e1e; /* Dark gray background */
+    padding: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0; /* Add this line to align to the left edge */
+    width: 100vw; /* Use viewport width to span full width */
+    z-index: 1000;
+    padding-left: 200px;
+    padding-top: 100px;
+  }
+  
+  .header-content {
+    font-family: 'Anton', sans-serif;
+    font-size: 200px;
+    text-shadow: -2px -2px 15px #737882;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+  }
+  
