@@ -3,14 +3,14 @@ import { Avatar, AvatarGroup, AvatarProps, Card, CardContent, CardOverflow, Divi
 import AspectRatio from '@mui/joy/AspectRatio';
 
 interface ExperienceCardProps {
-  title: string;
-  company: string;
-  date: string;
-  imgSrc: string; 
-  skillIcons: AvatarProps['src'][];
-}
-
-const InvertedExperienceCard: React.FC<ExperienceCardProps> = ({ title, company, date, imgSrc, skillIcons }) => {
+    title: string;
+    desc: string;
+    company: string;
+    date: string;
+    imgSrc: string; 
+    skillIcons: AvatarProps['src'][];
+  }
+const InvertedExperienceCard: React.FC<ExperienceCardProps> = ({ title, desc, company, date, imgSrc, skillIcons }) => {
   return (
     <div className="section-container">
       <Card variant="soft" sx={{ width: 500, display: 'flex', bgcolor: 'background.level3' }}>
@@ -48,9 +48,7 @@ const InvertedExperienceCard: React.FC<ExperienceCardProps> = ({ title, company,
       </Card>
       <div className="text-container">
         <h2>{title}</h2>
-        <p>
-          I created this project using Unreal Engine 5, using free assets to create a platforming game akin to Fall Guys or Super Mario 3D. You can follow this URL to download it for Windows.
-        </p>
+        <p>{desc}</p>
       </div>
     </div>
   );
