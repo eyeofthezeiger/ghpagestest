@@ -6,6 +6,8 @@ import About from './components/Content/About'; // Adjust the path accordingly
 import './App.css';
 import Header from './components/Header/Header';
 
+
+
 const App: React.FC = () => {
   const [activeSection, setActiveSection] = useState('portfolio');
 
