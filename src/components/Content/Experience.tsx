@@ -6,7 +6,6 @@ import CardOverflow from '@mui/joy/CardOverflow';
 import Divider from '@mui/joy/Divider';
 import Typography from '@mui/joy/Typography';
 import React from 'react';
-import AppleLogo from '../../assets/applePixels.png';
 import skills from '../../assets/skills/skills';
 
 
