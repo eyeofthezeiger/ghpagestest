@@ -7,64 +7,59 @@ import Divider from '@mui/joy/Divider';
 import Typography from '@mui/joy/Typography';
 import React from 'react';
 import skills from '../../assets/skills/skills';
+import ExperienceCard from '../Card/ExperienceCard';
+import InvertedExperienceCard from '../Card/InvertedExperienceCard';
 
 
 
 
 const Experience: React.FC = () => {
   return (
-<div className="section-container">
-                <div className="text-container">
-                  <h2>WNTR.Woo</h2>
-                  <p>
-                  I created this project using Unreal Engine 5, using free assets to create a platforming game akin to Fall Guys or Super Mario 3D. You can follow this URL to download it for Windows.
-                  </p>
-                </div>
-                <Card variant="soft" sx={{ width: 500, display: 'flex' }}>
-                  <CardOverflow>
-                    <AspectRatio ratio="2">
-                      <img
-                        src="https://images.unsplash.com/photo-1532614338840-ab30cf10ed36?auto=format&fit=crop&w=318"
-                        srcSet="https://images.unsplash.com/photo-1532614338840-ab30cf10ed36?auto=format&fit=crop&w=318&dpr=2 2x"
-                        loading="lazy"
-                        alt=""
-                      />
-                    </AspectRatio>
-                  </CardOverflow>
-                  <CardContent sx={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-                    <Typography level="title-md">Software Engineer</Typography>
-                    <Typography level="body-sm">Liberty Mutual</Typography>
-                  </CardContent>
-                  <CardOverflow variant="soft" sx={{ bgcolor: 'background.level1' }}>
-                    <Divider inset="context" />
-                    <CardContent orientation="horizontal">
-                      <Typography level="body-xs" fontWeight="md" textColor="text.secondary">
-                        2022 - Present
-                      </Typography>
-                      <Divider orientation="vertical" />
-
-
-                      <div className="avatar-row">
-                        <AvatarGroup >
-                          <Avatar color="neutral" variant="solid" src={skills.react}/>
-                          <Avatar color="neutral" variant="solid" src={skills.html}/>
-                          <Avatar color="neutral" variant="solid" src={skills.css}/>
-                          <Avatar color="neutral" variant="solid" src={skills.js}/>
-                          <Avatar color="neutral" variant="solid" src={skills.java}/>
-                          <Avatar color="neutral" variant="solid" src={skills.spring}/>
-                          <Avatar color="neutral" variant="solid" src={skills.npm}/>
-                          <Avatar color="neutral" variant="solid" src={skills.mysql}/>
-                          <Avatar color="neutral" variant="solid" src={skills.aws}/>
-                          <Avatar color="neutral" variant="solid" src={skills.docker}/>
-                        </AvatarGroup>
-                      </div>
-                      
-                    </CardContent>
-                  </CardOverflow>
-                </Card>
-              </div>
-
-
+    <div className="experience-container">
+      <ExperienceCard
+      title='Software Engineer'
+      company='Liberty Mutual'
+      date='March 2022 - Present'
+      imgSrc='https://images.unsplash.com/photo-1532614338840-ab30cf10ed36?auto=format&fit=crop&w=318'
+      skillIcons={[skills.react, skills.html, skills.css, skills.js, skills.java, skills.spring, skills.npm, skills.mysql, skills.aws, skills.docker, skills.figma]}
+      />
+      <InvertedExperienceCard
+      title='Configuration Engineer'
+      company='Liberty Mutual'
+      date='January 2020 - March 2022'
+      imgSrc='https://images.unsplash.com/photo-1532614338840-ab30cf10ed36?auto=format&fit=crop&w=318'
+      skillIcons={[skills.react, skills.html, skills.css, skills.js, skills.java, skills.spring, skills.npm, skills.mysql, skills.aws, skills.docker]}
+      />  
+      <ExperienceCard
+      title='Talent Aquisition Associate'
+      company='Percy (Startup)'
+      date='June 2019 - January 2020'
+      imgSrc='https://images.unsplash.com/photo-1532614338840-ab30cf10ed36?auto=format&fit=crop&w=318'
+      skillIcons={[skills.ruby, skills.html, skills.css, skills.npm, skills.mysql]}
+      />
+      <InvertedExperienceCard
+      title='Associate Software Developer'
+      company='Liberty Mutual'
+      date='January 2017 - June 2019'
+      imgSrc='https://images.unsplash.com/photo-1532614338840-ab30cf10ed36?auto=format&fit=crop&w=318'
+      skillIcons={[skills.angular, skills.html, skills.css, skills.js, skills.java, skills.spring, skills.npm, skills.mysql, skills.sketch ]}
+      />  
+      <ExperienceCard
+      title='Technology Associate'
+      company='Liberty Mutual'
+      date='March 2022 - Present'
+      imgSrc='https://images.unsplash.com/photo-1532614338840-ab30cf10ed36?auto=format&fit=crop&w=318'
+      skillIcons={[skills.angular, skills.html, skills.css, skills.js, skills.java, skills.spring, skills.npm, skills.mysql, skills.sketch]}
+      />
+      <InvertedExperienceCard
+      title='Information Sciences and Technology'
+      company='Pennsylvania State University'
+      date='August 2012 - December 2016'
+      imgSrc='https://images.unsplash.com/photo-1532614338840-ab30cf10ed36?auto=format&fit=crop&w=318'
+      skillIcons={[ skills.html, skills.css, skills.js, skills.java ]}
+      />  
+    </div> 
+    
   );
 };
 

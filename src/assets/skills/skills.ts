@@ -1,7 +1,7 @@
 import angular from './angular.svg';
 import aws from './aws.svg';
 import csharp from './csharp.svg';
-import css from './css.svg';
+import css from './css3.svg';
 import docker from './docker.svg';
 import figma from './figma.svg';
 import html from './html5.svg';
@@ -13,7 +13,7 @@ import mysql from './mysql.svg';
 import nodejs from './nodejs.svg';
 import npm from './npm.svg';
 import python from './python.svg';
-import react from './react.svg';
+import react from './reactjs.svg';
 import redis from './redis.svg';
 import ruby from './ruby.svg';
 import sketch from './sketch.svg';
