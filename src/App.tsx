@@ -5,6 +5,7 @@ import Experience from './components/Content/Experience'; // Adjust the path acc
 import About from './components/Content/About'; // Adjust the path accordingly
 import './App.css';
 import Header from './components/Header/Header';
+import Navbar from './components/NavBar/Navbar';
 
 
 
@@ -37,17 +38,7 @@ const App: React.FC = () => {
         <SnakeGame />
       </section>
 
-
-      <nav className="navbar">
-        <button onClick={() => handleSectionChange('experience')}>
-          Experience
-        </button>
-        <button onClick={() => handleSectionChange('portfolio')}>
-          Portfolio
-        </button>
-        <button onClick={() => handleSectionChange('about')}>About Me</button>
-      </nav>
-
+      <Navbar handleSectionChange={handleSectionChange} activeSection={activeSection} />
 
       <section className="selected-section">{sectionToRender}</section>
     </div>
